@@ -6,5 +6,13 @@ import { EmployeeComponent } from './employee/employee.component';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  pageHeader = 'Employee Details';
+  pageHeader : string = 'Employee Details';
+  imagePath : string = 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31'; 
+
+  firstName : string = 'Tommy';
+  lastName : string = 'Cat';
+
+  getFullName() : string {
+    return this.firstName + ' ' + this.lastName;
+  }
 }
