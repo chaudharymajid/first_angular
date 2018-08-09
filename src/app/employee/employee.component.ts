@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'employee',
-  templateUrl: './employee/employee.component.html'  
+  templateUrl: 'app/employee/employee.component.html'  
 })
-export class EmpComponent {
+export class EmployeeComponent {
   firstName : string = 'Tom';
   lasttName : string = 'Hopkins';
   gender : string = 'Male';
