@@ -6,12 +6,12 @@ import { EmpComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, EmpComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent, EmpComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
