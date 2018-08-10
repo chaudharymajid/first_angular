@@ -10,4 +10,5 @@ export class EmployeeComponent {
   lastName : string = 'Hopkins';
   gender : string = 'Male';
   age : number = 30;
+  columnSpan : number = 2;
 }

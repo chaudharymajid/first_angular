@@ -1,8 +1,10 @@
 <table >
     <thead>
-        <td><h3>Head1</h3></td>
-        <td><h3>Head2</h3></td>
+        <tr>
+            <th [attr.colspan]="columnSpan">Employee Details</th>
+        </tr>
     </thead>
+    <tbody>
     <tr>
         <td >
             First Name
@@ -35,4 +37,5 @@
             {{age}}
         </td>
     </tr>
+</tbody>
 </table>

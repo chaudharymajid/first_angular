@@ -11,6 +11,8 @@ export class AppComponent {
 
   firstName : string = 'Tommy';
   lastName : string = 'Cat';
+  classesToApply : string = 'italicClass boldClass';
+  applyBoldClass: boolean = true;
 
   getFullName() : string {
     return this.firstName + ' ' + this.lastName;

@@ -1,7 +1,12 @@
 <h1>
     {{getFullName()}}
 </h1>
-<img src='{{imagePath}}'/>
+<img [src]='imagePath'/>
 <div>
 <employee></employee>
 </div>
+<br/>
+<button class = "colorClass" [class]='classesToApply' style="width: 162px">My Button</button>
+<br/>
+<br/>
+<button class = "colorClass" [class.boldClass]='applyBoldClass' style="width: 162px">My Button</button>

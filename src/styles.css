@@ -1,11 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-h1 {
+
+.boldClass{
+    font-weight: bold;
+}
+
+.italicClass{
+    font-style: italic;
+}
+
+.colorClass{
+    color: red;
+}
+
+/* h1 {
     color: #369;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
 }
 
-/* table {
+table {
     color: #369;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
@@ -13,5 +26,9 @@ h1 {
 }
 
 td{
+    border: 1px solid black;    
+}
+
+tr{
     border: 1px solid black;    
 } */
