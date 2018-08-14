@@ -17,4 +17,8 @@ export class AppComponent {
   getFullName() : string {
     return this.firstName + ' ' + this.lastName;
   }
+
+  onClick() : void {
+    alert('Button Clicked');
+  }
 }

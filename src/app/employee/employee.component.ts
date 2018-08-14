@@ -10,5 +10,12 @@ export class EmployeeComponent {
   lastName : string = 'Hopkins';
   gender : string = 'Male';
   age : number = 30;
+  showDetails : boolean = false;
+  
   columnSpan : number = 2;
+
+  toggleDetails(): void {
+    this.showDetails = !this.showDetails;
+  }
+
 }

@@ -21,7 +21,7 @@
             {{lastName}}
         </td>
     </tr>
-    <tr>
+    <tr *ngIf='showDetails'>
         <td>
             Gender
         </td>
@@ -29,7 +29,7 @@
             {{gender}}
         </td>
     </tr>
-    <tr>
+    <tr *ngIf='showDetails'>
         <td>
             Age
         </td>
@@ -39,3 +39,5 @@
     </tr>
 </tbody>
 </table>
+<br/>
+<button (click) = "toggleDetails()" style="width: 150px; height: 30px;">{{showDetails? 'Hide' : 'Show'}} Details</button>
