@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
-import {EmployeeComponentList} from './employee/emp.complist';
+import { EmployeeComponentList } from './employee/emp.complist';
 
 @NgModule({
   declarations: [
