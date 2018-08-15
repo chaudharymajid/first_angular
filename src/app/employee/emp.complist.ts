@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'emp-complist',
-    templateUrl: 'emp.complist.html'    
+    templateUrl: 'emp.complist.html',
+    styleUrls : ['emplist.comp.css']
 })
 export class EmployeeComponentList {
 
