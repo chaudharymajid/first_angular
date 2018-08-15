@@ -1,6 +1,27 @@
-<h1>
-    {{getFullName()}}
-</h1>
+<html>
+<header>    
+    {{getFullName()}}    
+</header>
+
+<body>
+        <ng-sidebar-container style="height: 100vh;">
+
+                <ng-sidebar [(opened)]="_opened">
+                  <ul>
+                    <li>Menu Item</li>
+                    <li>Menu Item</li>
+                    <li>Menu Item</li>     
+                    <!-- <button closeSidebar>Closes the sidebar</button>                -->
+                  </ul>
+                </ng-sidebar>
+              
+                <div ng-sidebar-content>
+                    
+                  <button (click)= "_toggleSidebar()">Toggle sidebar</button>                  
+                </div>
+              
+              </ng-sidebar-container>
+
 <img [src]='imagePath'/>
 <div>
 <emp-complist></emp-complist>
@@ -11,3 +32,5 @@ Name : <input size="11" [(ngModel)] = 'firstName'>
 <br/>
 First Name is :- {{firstName}}
 </div>
+</body>
+</html>

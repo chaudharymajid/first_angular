@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { EmployeeComponent } from './employee/employee.component';
+import { SidebarModule, CloseSidebar } from 'ng-sidebar';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  
 })
 export class AppComponent {
   pageHeader : string = 'Employee Details';
@@ -20,5 +22,12 @@ export class AppComponent {
 
   onClick() : void {
     alert('Button Clicked');
+  }
+
+  private _opened: boolean = false;
+ 
+  _toggleSidebar(): void {
+    this._opened = !this._opened;
+    if (this._opened == true) { CloseSidebar; }
   }
 }
