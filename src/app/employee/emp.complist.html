@@ -1,3 +1,13 @@
+<br/>
+<div>
+    <form action="">
+        <input type="radio" name="gender" value="all"> All
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="male"> Other
+      </form>
+</div>
+<br/>
+
 <table>
     <thead>
         <tr>
@@ -12,9 +22,9 @@
 
      <tr *ngFor = "let employee of employees; trackBy:trackByEmpCode">
          <td>{{employee.code}}</td>
-         <td>{{employee.name | uppercase}}</td>
-         <td>{{employee.gender}}</td>
-         <td>{{employee.annualSalary | currency : 'GBP'}}</td>
+         <td>{{employee.name }}</td>
+         <td>{{employee.gender | employeeTitle:employee.gender}}</td>
+         <td>{{employee.annualSalary | currency : 'RUB' :true: '1.2-2'}}</td>
          <td>{{employee.dateOfBirth | date:'fullDate' | uppercase }}</td>         
      </tr>
      <tr *ngIf = "!employees || employees.length == 0">
@@ -24,4 +34,4 @@
 </tbody>
 </table>
 <br/>
-<button (click)="getEmployees()">Refresh Table</button>
+<button (click)="toggleEmployees()">{{showNewEmployee ? 'Hide New Dude ' : 'Show New Dude ' }}</button>
