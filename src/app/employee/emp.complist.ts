@@ -10,6 +10,8 @@ export class EmployeeComponentList {
     employees : any[];
     showNewEmployee : boolean = false;
 
+    selectedEmployeeCountRadioButton: string = 'All';
+
     constructor(){
     this.employees = [
         {code: '101', name: 'Tom', gender: 'Male', annualSalary: 5500, dateOfBirth: '04/25/1984'},
@@ -39,6 +41,10 @@ export class EmployeeComponentList {
             ]
         }
     };
+
+    onEmployeeCountRadioButtonChange(selectedRadioButtonValue: string): void {
+        this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
+    }
 
     trackByEmpCode(index: number, employee: any): string {
         return employee.code;

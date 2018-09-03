@@ -1,32 +1,41 @@
-<employee-count [all] = "getEmployeesCount()"
-                [male] = "getMaleEmpoyeesCount()"
-                [female] = "getFemaleEmpoyeesCount()">    
+<employee-count [all]="getEmployeesCount()" [male]="getMaleEmpoyeesCount()" [female]="getFemaleEmpoyeesCount()" (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChange($event)">
 </employee-count>
-    <br/><br/>
+<br/><br/>
 <table>
     <thead>
         <tr>
-            <td><h3>Code</h3></td>
-            <td><h3>Name</h3></td>
-            <td><h3>Gender</h3></td>
-            <td><h3>Annual Salary</h3></td>
-            <td><h3>Date of Birth</h3></td>            
+            <td>
+                <h3>Code</h3>
+            </td>
+            <td>
+                <h3>Name</h3>
+            </td>
+            <td>
+                <h3>Gender</h3>
+            </td>
+            <td>
+                <h3>Annual Salary</h3>
+            </td>
+            <td>
+                <h3>Date of Birth</h3>
+            </td>
         </tr>
     </thead>
     <tbody>
+        <ng-container *ngFor="let employee of employees;">
+            <tr *ngIf="selectedEmployeeCountRadioButton=='All' || selectedEmployeeCountRadioButton==employee.gender">
+                <td>{{employee.code}}</td>
+                <td>{{employee.name | employeeTitle:employee.gender}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.annualSalary }}</td>
+                <td>{{employee.dateOfBirth | date:'fullDate' | uppercase }}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!employees || employees.length == 0">
+            <td colspan="5"> No Employees</td>
+        </tr>
 
-     <tr *ngFor = "let employee of employees; trackBy:trackByEmpCode">
-         <td>{{employee.code}}</td>
-         <td>{{employee.name | employeeTitle:employee.gender}}</td>
-         <td>{{employee.gender}}</td>
-         <td>{{employee.annualSalary | currency : 'RUB' :true: '1.2-2'}}</td>
-         <td>{{employee.dateOfBirth | date:'fullDate' | uppercase }}</td>         
-     </tr>
-     <tr *ngIf = "!employees || employees.length == 0">
-         <td colspan="5"> No Employees</td>
-     </tr>
-     
-</tbody>
+    </tbody>
 </table>
 <br/>
 <button (click)="toggleEmployees()">{{showNewEmployee ? 'Hide ' : 'Show ' }}New Dude</button>
