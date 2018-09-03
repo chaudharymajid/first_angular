@@ -35,6 +35,7 @@ export class EmployeeComponentList {
                 {code: '103', name: 'Kate', gender: 'Female', annualSalary: 6000, dateOfBirth: '02/27/1986'},
                 {code: '104', name: 'Marry', gender: 'Female', annualSalary: 7000, dateOfBirth: '01/28/1987'},
                 {code: '105', name: 'Nancy', gender: 'Female', annualSalary: 7100, dateOfBirth: '01/09/1901'},
+                {code: '106', name: 'Harry', gender: 'Male', annualSalary: 5400, dateOfBirth: '03/24/1983'},
             ]
         }
     };
@@ -47,7 +48,9 @@ export class EmployeeComponentList {
         return this.employees.length;
     }
     getMaleEmpoyeesCount(): number {
-        return this.employees.filter(e=> e.gender ==="Male").length;
+        return this.employees.reduce(function (n, males) {
+            return n + (males.gender == 'Male');
+        }, 0);        
     }
 
     getFemaleEmpoyeesCount(): number {
