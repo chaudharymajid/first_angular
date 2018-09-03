@@ -1,13 +1,8 @@
-<br/>
-<div>
-    <form action="">
-        <input type="radio" name="gender" value="all"> All
-        <input type="radio" name="gender" value="female"> Female
-        <input type="radio" name="gender" value="male"> Other
-      </form>
-</div>
-<br/>
-
+<employee-count [all] = "getEmployeesCount()"
+                [male] = "getMaleEmpoyeesCount()"
+                [female] = "getFemaleEmpoyeesCount()">    
+</employee-count>
+    <br/><br/>
 <table>
     <thead>
         <tr>
@@ -22,8 +17,8 @@
 
      <tr *ngFor = "let employee of employees; trackBy:trackByEmpCode">
          <td>{{employee.code}}</td>
-         <td>{{employee.name }}</td>
-         <td>{{employee.gender | employeeTitle:employee.gender}}</td>
+         <td>{{employee.name | employeeTitle:employee.gender}}</td>
+         <td>{{employee.gender}}</td>
          <td>{{employee.annualSalary | currency : 'RUB' :true: '1.2-2'}}</td>
          <td>{{employee.dateOfBirth | date:'fullDate' | uppercase }}</td>         
      </tr>
@@ -34,4 +29,4 @@
 </tbody>
 </table>
 <br/>
-<button (click)="toggleEmployees()">{{showNewEmployee ? 'Hide New Dude ' : 'Show New Dude ' }}</button>
+<button (click)="toggleEmployees()">{{showNewEmployee ? 'Hide ' : 'Show ' }}New Dude</button>
