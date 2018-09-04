@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import {IEmployee} from "./employee";
 
 @Component({
     selector: 'emp-complist',
@@ -7,7 +8,7 @@ import { Component } from "@angular/core";
 })
 export class EmployeeComponentList {
 
-    employees : any[];
+    employees : IEmployee[];
     showNewEmployee : boolean = false;
 
     selectedEmployeeCountRadioButton: string = 'All';
@@ -54,9 +55,7 @@ export class EmployeeComponentList {
         return this.employees.length;
     }
     getMaleEmpoyeesCount(): number {
-        return this.employees.reduce(function (n, males) {
-            return n + (males.gender == 'Male');
-        }, 0);        
+        return this.employees.filter(e=> e.gender ==="Male").length;     
     }
 
     getFemaleEmpoyeesCount(): number {
