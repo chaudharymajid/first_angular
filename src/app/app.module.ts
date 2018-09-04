@@ -7,11 +7,10 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeComponentList } from './employee/emp.complist';
 import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
 import { EmployeeCountComponent } from './employee/employeeCount.component';
-import { typoGraphy } from './other/simple.component';
 
 @NgModule({
   declarations: [
-    AppComponent , EmployeeComponent, EmployeeComponentList, EmployeeTitlePipe, EmployeeCountComponent, typoGraphy
+    AppComponent , EmployeeComponent, EmployeeComponentList, EmployeeTitlePipe, EmployeeCountComponent
   ],
   imports: [
     BrowserModule, FormsModule
