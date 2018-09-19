@@ -37,7 +37,7 @@ export class EmployeeComponentList implements OnInit {
                 { code: '104', name: 'Marry', gender: 'Female', annualSalary: 7000, dateOfBirth: '01/28/1987' },
                 { code: '105', name: 'Nancy', gender: 'Female', annualSalary: 7100, dateOfBirth: '01/09/1901' },
                 { code: '106', name: 'Harry', gender: 'Male', annualSalary: 5400, dateOfBirth: '03/24/1983' },
-                { code: '107', name: 'Adam', gender: 'Male', annualSalary: 7500, dateOfBirth: '04/02/2009' },
+                { code: '107', name: 'Adam', gender: 'Male', annualSalary: 7500, dateOfBirth: '02/04/2009' },
             ]
         }
     };
